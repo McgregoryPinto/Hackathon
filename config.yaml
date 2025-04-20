@@ -1,0 +1,4 @@
+train: '/Volumes/disco ssd/Estudo/Fiap/hackathon/dataset/images/train'  # Caminho absoluto
+val: '/Volumes/disco ssd/Estudo/Fiap/hackathon/dataset/images/val'   # Caminho absoluto
+nc: 3  # Número de classes
+names: ['knife', 'scissors', 'fork']  # Nomes das classes
