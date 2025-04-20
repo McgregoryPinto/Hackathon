@@ -91,11 +91,13 @@ Para testar o modelo usando a sua webcam, você pode executar um dos seguintes a
 1. Para usar o modelo treinado localmente, execute o arquivo [`pred_local_captura_webcam.py`](./pred_local_captura_webcam.py):
 
 ```bash
-python pred_local_captura_webcam.py []  # O parâmetro  é opcional. Se não for informado, a webcam será usada.
+add-gui-and-update-requirements
+python pred_local_captura_webcam.py [<caminho_do_video>]  # O parâmetro <caminho_do_video> é opcional. Se não for informado, a webcam será usada.
+
 ```
 
 2. Para usar o modelo treinado da própria YOLO, execute o arquivo [`pred_yolo_captura_webcam.py`](./pred_yolo_captura_webcam.py):
 
 ```bash
-python pred_yolo_captura_webcam.py []  # O parâmetro  é opcional. Se não for informado, a webcam será usada.
+python pred_yolo_captura_webcam.py [<caminho_do_video>]  # O parâmetro <caminho_do_video> é opcional. Se não for informado, a webcam será usada.
 ```
