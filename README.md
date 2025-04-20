@@ -1,3 +1,50 @@
+
+Jupyter
+App
+BETA
+Browser
+Workspace
+
+Hackathon
+
+.git
+
+dataset
+
+.gitignore
+
+config.yaml
+
+cp_files.py
+
+model_train.py
+
+names.txt
+
+pred_local_captura_webcam.mp4
+
+pred_local_captura_webcam.py
+
+pred_yolo_captura_webcam.mp4
+
+pred_yolo_captura_webcam.py
+
+prepare_dataset.py
+
+README.md
+
+requirements.txt
+
+teste.py
+
+teste2.py
+
+teste3.py
+
+view.txt
+
+view_train.txt
+Open in VS Code
 # Hackathon
 Entrega final - AI for devs
 
@@ -44,7 +91,9 @@ Para testar o modelo usando a sua webcam, você pode executar um dos seguintes a
 1. Para usar o modelo treinado localmente, execute o arquivo [`pred_local_captura_webcam.py`](./pred_local_captura_webcam.py):
 
 ```bash
+add-gui-and-update-requirements
 python pred_local_captura_webcam.py [<caminho_do_video>]  # O parâmetro <caminho_do_video> é opcional. Se não for informado, a webcam será usada.
+
 ```
 
 2. Para usar o modelo treinado da própria YOLO, execute o arquivo [`pred_yolo_captura_webcam.py`](./pred_yolo_captura_webcam.py):
