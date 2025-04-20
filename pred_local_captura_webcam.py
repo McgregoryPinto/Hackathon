@@ -1,3 +1,4 @@
+import sys
 from ultralytics import YOLO
 import cv2
 import numpy as np
@@ -28,8 +29,16 @@ model = YOLO('runs/detect/train13/weights/best.torchscript')
 # Carrega os nomes das classes
 model_names = model.names
 
-# Inicializa a webcam
-cap = cv2.VideoCapture(0)  # 0 é o índice da webcam padrão
+import sys
+
+# Obtém o nome do arquivo de vídeo a partir dos argumentos da linha de comando
+video_file = sys.argv[1] if len(sys.argv) > 1 else None
+
+# Inicializa a captura de vídeo
+if video_file:
+    cap = cv2.VideoCapture(video_file)  # Usa o arquivo de vídeo fornecido
+else:
+    cap = cv2.VideoCapture(0)  # Usa a webcam padrão se nenhum arquivo for fornecido
 
 # Define a resolução desejada
 largura = 640
