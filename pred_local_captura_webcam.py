@@ -31,12 +31,18 @@ model_names = model.names
 
 import sys
 
+import os
+
 # Obtém o nome do arquivo de vídeo a partir dos argumentos da linha de comando
 video_file = sys.argv[1] if len(sys.argv) > 1 else None
 
 # Inicializa a captura de vídeo
 if video_file:
-    cap = cv2.VideoCapture(video_file)  # Usa o arquivo de vídeo fornecido
+    if os.path.exists(video_file):
+        cap = cv2.VideoCapture(video_file)  # Usa o arquivo de vídeo fornecido
+    else:
+        print(f"Arquivo de vídeo {video_file} não encontrado. Usando webcam.")
+        cap = cv2.VideoCapture(0)
 else:
     cap = cv2.VideoCapture(0)  # Usa a webcam padrão se nenhum arquivo for fornecido
 
