@@ -24,8 +24,8 @@ Para baixar o dataset do Kaggle, siga as instruções abaixo:
 
 Para que o YOLOv5 funcione corretamente, as imagens precisam ter marcadores específicos para o treinamento. Siga os passos abaixo para preparar o dataset:
 
-1. Execute o arquivo `prepare_dataset.py` com o comando `python prepare_dataset.py` para preparar os dados.
-2. Em seguida, execute o arquivo `cp_files.py` com o comando `python cp_files.py` para copiar os arquivos necessários.
+1. Execute o arquivo [`prepare_dataset.py`](./prepare_dataset.py) com o comando `python prepare_dataset.py` para preparar os dados.
+2. Em seguida, execute o arquivo [`cp_files.py`](./cp_files.py) com o comando `python cp_files.py` para copiar os arquivos necessários.
 
 Após esses passos, o modelo estará pronto para ser treinado localmente.
 
@@ -41,14 +41,14 @@ python model_train.py
 
 Para testar o modelo usando a sua webcam, você pode executar um dos seguintes arquivos:
 
-1. Para usar o modelo treinado localmente, execute:
+1. Para usar o modelo treinado localmente, execute o arquivo [`pred_local_captura_webcam.py`](./pred_local_captura_webcam.py):
 
 ```bash
-python pred_local_captura_webcam.py
+python pred_local_captura_webcam.py <caminho_do_video>
 ```
 
-2. Para usar o modelo treinado da própria YOLO, execute:
+2. Para usar o modelo treinado da própria YOLO, execute o arquivo [`pred_yolo_captura_webcam.py`](./pred_yolo_captura_webcam.py):
 
 ```bash
-python pred_yolo_captura_webcam.py
+python pred_yolo_captura_webcam.py <caminho_do_video>
 ```
