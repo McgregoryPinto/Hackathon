@@ -2,13 +2,18 @@ from flask import Flask, request, jsonify
 import boto3
 import os
 from flask_cors import CORS
-CORS(app)
+app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})
+
+import logging
+
+logging.basicConfig(level=logging.INFO)
 
 app = Flask(__name__)
 
 # Initialize AWS clients
 s3 = boto3.client('s3')
-rekognition = boto3.client('rekognition')
+rekognition = boto3.client('rekognition', region_name='us-east-1')
 
 # S3 bucket name
 BUCKET_NAME = 'my-video-data-bucket'
@@ -24,6 +29,7 @@ def upload_video():
 
     # Upload the file to S3
     s3.upload_fileobj(file, BUCKET_NAME, file.filename)
+    app.logger.info('File uploaded successfully')
     return jsonify({"message": "File uploaded successfully"}), 200
 
 @app.route('/detect', methods=['POST'])
@@ -36,6 +42,7 @@ def detect_objects():
     )
     
     detected_labels = [label['Name'] for label in response['Labels']]
+    app.logger.info('Detected labels: %s', detected_labels)
     return jsonify({"detected_labels": detected_labels}), 200
 
 if __name__ == '__main__':
