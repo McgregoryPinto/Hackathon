@@ -1,2 +1,5 @@
 yolo*
 *.pt
+dataset/
+runs/
+.DS_Store
