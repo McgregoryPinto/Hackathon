@@ -38,6 +38,18 @@ python model_train.py
 ```
 
 ## Teste com Webcam
+## Interface Gráfica para Execução de Scripts
+
+Para facilitar a execução dos scripts de detecção, você pode usar a interface gráfica disponível no arquivo `script_executor.py`. Esta interface permite selecionar qual script executar e se deseja usar um arquivo de vídeo ou a webcam.
+
+Para usar a interface gráfica, execute o seguinte comando:
+
+```bash
+python script_executor.py
+```
+
+Certifique-se de ter todas as dependências instaladas conforme especificado no arquivo `requirements.txt`.
+
 
 Para testar o modelo usando a sua webcam, você pode executar um dos seguintes arquivos:
 
