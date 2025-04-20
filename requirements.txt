@@ -1,6 +1,7 @@
 # External dependencies for the project
 pygame
-cv2
+opencv-python-headless
 numpy==2.2.4
 torch
 ultralytics
+tkinter
