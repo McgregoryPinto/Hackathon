@@ -1,7 +1,8 @@
 # External dependencies for the project
 pygame
 opencv-python-headless
-numpy==2.2.4
+numpy
 torch
 ultralytics
 tkinter
+tkintertable

@@ -4,7 +4,7 @@ import subprocess
 
 # Function to execute the selected script
 def execute_script(script_name, video_path=None):
-    command = ['python', script_name]
+    command = ['python3', script_name]
     if video_path:
         command.append(video_path)
     subprocess.run(command)
