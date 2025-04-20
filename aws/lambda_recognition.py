@@ -1,6 +1,6 @@
 import boto3
 
-def lambda_handler(event, context):
+def lambda_recognition(event, context):
     rekognition = boto3.client('rekognition')
     response = rekognition.detect_labels(
         Image={'S3Object': {'Bucket': 'my-video-data-bucket', 'Name': 'frame.jpg'}},
