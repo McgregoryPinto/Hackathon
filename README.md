@@ -2,6 +2,13 @@
 # Hackathon
 Entrega final - AI for devs
 
+## Aluno
+Nome: Mcgregory D F R Pinto
+Matricula: rm357350
+
+## link github:
+https://github.com/McgregoryPinto/Hackathon
+
 ## Instruções de Configuração
 
 Para configurar o projeto, você precisa clonar o repositório YOLOv5 e instalar suas dependências. Execute os seguintes comandos:
@@ -78,3 +85,5 @@ Para usar a interface gráfica, execute o seguinte comando:
 ```bash
 python3 script_executor.py
 ```
+## TO DO
+Implementar na AWS 

@@ -56,7 +56,7 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT, altura)
 
 # Define o codec e cria o objeto VideoWriter
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Codec para vídeos MP4
-out = cv2.VideoWriter('pred_yolo_captura_webcam.mp4', fourcc, 20.0, (largura, altura))  # Nome do arquivo, codec, FPS e resolução
+out = cv2.VideoWriter('pred_local_captura_webcam.mp4', fourcc, 20.0, (largura, altura))  # Nome do arquivo, codec, FPS e resolução
 
 # Selecionamos as apenas as classes abaixo criar os frames e gerar alarmes
 class_to_show = ['knife', 'scissors', 'fork']
